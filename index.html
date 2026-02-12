@@ -30,13 +30,38 @@
             padding: 20px;
             text-align: center;
         }
+        .gallery {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 10px;
+        }
+        .gallery img {
+            max-width: 100%;
+            height: auto;
+            border: 2px solid black;
+            border-radius: 5px;
+        }
+        .service-block {
+            background-color: #f3f3f3;
+            padding: 20px;
+            margin: 10px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            flex: 1 1 300px; /* Responsive flex properties */
+        }
         footer {
             background-color: yellow;
             padding: 10px;
             text-align: center;
-            position: fixed;
-            width: 100%;
+            position: relative;
             bottom: 0;
+            width: 100%;
+        }
+        @media (max-width: 600px) {
+            nav {
+                flex-direction: column;
+            }
         }
     </style>
 </head>
@@ -46,21 +71,51 @@
         <nav>
             <a href="#services">Services</a>
             <a href="#about">About Us</a>
+            <a href="#gallery">Gallery</a>
             <a href="#contact">Contact</a>
         </nav>
     </header>
+    
     <section id="services">
         <h2>Our Services</h2>
-        <p>We offer a range of marketing solutions to help your business grow.</p>
+        <div class="gallery">
+            <div class="service-block">
+                <h3>Truck Rentals</h3>
+                <p>We offer a wide selection of trucks for all your transportation needs.</p>
+            </div>
+            <div class="service-block">
+                <h3>Engine Repairs</h3>
+                <p>Expert engine repair services to keep your vehicles running smoothly.</p>
+            </div>
+            <div class="service-block">
+                <h3>Logistics Solutions</h3>
+                <p>Comprehensive logistics solutions for efficient supply chain management.</p>
+            </div>
+        </div>
     </section>
+
     <section id="about">
         <h2>About Us</h2>
-        <p>At cobuildev, we are dedicated to providing top-notch marketing services tailored to your needs.</p>
+        <p>At cobuildev, we are dedicated to providing top-notch marketing services tailored to your needs. Our experienced team is committed to excellence and customer satisfaction.</p>
     </section>
+
+    <section id="gallery">
+        <h2>Gallery</h2>
+        <div class="gallery">
+            <img src="https://via.placeholder.com/300x200?text=Truck+1" alt="Truck 1">
+            <img src="https://via.placeholder.com/300x200?text=Truck+2" alt="Truck 2">
+            <img src="https://via.placeholder.com/300x200?text=Engine+1" alt="Engine 1">
+            <img src="https://via.placeholder.com/300x200?text=Engine+2" alt="Engine 2">
+        </div>
+    </section>
+
     <section id="contact">
         <h2>Contact Us</h2>
         <p>Get in touch with us to discuss your marketing needs!</p>
+        <p>Email: info@cobuildev.com</p>
+        <p>Phone: (123) 456-7890</p>
     </section>
+
     <footer>
         <p>&copy; 2026 cobuildev. All rights reserved.</p>
     </footer>
